@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":["console","log"],"mappings":";;AAAAA,OAAO,CAACC,GAAR","sourcesContent":["console.log(`Hello World from main.js! \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files.`);\n"],"file":"main.js"}
+{"version":3,"sources":["../../src/js/main.js"],"names":[],"mappings":"AAAC,KAAM,UAAY,SAAS,cAAc,cAEnC,WAAa,aAAY,KAItB,UAAU,MAAM,UACnB,UAAU,MAAM,QAAU,GAExB,UAAU,MAAM,QAAU,EAC5B,UAAU,MAAM,SAAW,GAE3B,cAAc,cAEf,KAEH,OAAO,iBAAiB,OAAQ,a"}

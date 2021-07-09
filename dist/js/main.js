@@ -1,4 +1,2 @@
-"use strict";
-
-console.log("Hello World from main.js! \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files.");
+const preloader=document.querySelector(".preloader"),fadeEffect=setInterval((()=>{preloader.style.opacity||(preloader.style.opacity=1),preloader.style.opacity>0?preloader.style.opacity-=.1:clearInterval(fadeEffect)}),100);window.addEventListener("load",fadeEffect);
 //# sourceMappingURL=main.js.map

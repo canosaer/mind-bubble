@@ -7,11 +7,114 @@
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+		<script src="https://kit.fontawesome.com/5290a709ed.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="dist/css/main.css" />
 	</head>
 
 	<body>
+		<figure class="preloader">
+			<img class="preloader__icon" src="dist/img/loader.svg" alt="loading">
+		</figure>
 
+		<main class="display-grid">
+			<header class="top-row">
+				<figure class="toggle">
+					<div class="toggle__line toggle__line_1"></div>
+					<div class="toggle__line toggle__line_2"></div>
+				</figure>
+				<nav class="menu">
+					<ul class="menu__list">
+						<li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">Tutoring</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">Workshops</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">Volunteer</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">About Us</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">Contact Us</a></li>
+					</ul>
+				</nav>
+				<figure class="logo">
+					<a class="logo" href="#"></a>
+				</figure>
+				<form class="search-bar">
+					<input class="search-bar__input" placeholder="search">
+					<button class="search-bar__button">
+						<img class="search-bar__button-icon" src="src/img/magnifying-glass.svg" alt="search">
+					</button>
+				</form>
+			</header>
+
+			<section class="hero">
+				<h1 class="hero__heading">Mind Bubble Tutoring, Workshops, and Games</h1>
+				<h2 class="hero__cta">Join our light-hearted learning community!</h2>
+				<p class="hero__caption">Tell us more about yourself:</p>
+				<a class="hero__parent-button" href="#">I'm a parent or guardian</a>
+				<a class="hero__student-button" href="#">I'm a volunteer</a>
+			</section>
+
+			<section class="programs">
+				<h2 class="programs__heading">Fostering a Love of Learning</h2>
+				<div class="tutoring">
+					<h3 class="tutoring__heading">Free One-on-One Tutoring</h3>
+					<p class="tutoring__intro-text">Meet with a volunteer tutor in-person or online and get individualized instruction in a relaxed, fun environment.</p>
+					<a href="#" class="tutoring__card tutoring__card_tutors">
+						<img class="tutoring__card-image" src="dist/img/tutor.jpg" loading="lazy" alt="professional young adult leaning against wall">
+						<h4 class="tutoring__card-heading">Tutors</h4>
+					</a>
+					<a href="#" class="tutoring__card tutoring__card_schedule">
+						<img class="tutoring__card-image" src="dist/img/student.jpg" loading="lazy" alt="happy student raising hand">
+						<h4 class="tutoring__card-heading">Schedule</h4>
+					</a>
+					<a href="#" class="tutoring__card tutoring__card_grades">
+						<img class="tutoring__card-image" src="dist/img/grades.jpg" loading="lazy" alt="kids of different ages">
+						<p class="tutoring__card-text"><span class="tutoring__card-text tutoring__card-text_bold">Grades 4-10:</span> Get individualized support in every subject, including test prep, academic, enrichment, and learning differences.</p>
+					</a>
+					<a class="tutoring__button">Learn more about Tutoring</a>
+				</div>
+
+				<div class="workshops">
+					<h3 class="workshops__heading">Free Educational Workshops</h3>
+					<p class="workshops__intro-text">Led by experts in a variety of topics, our free workshops offer students in grades 4-10 a fun and engaging way to learn.</p>
+					<a href="#" class="workshops__card workshops__card_topics">
+						<img class="workshops__card-image" src="dist/img/topics.jpg" loading="lazy" alt="cans of paint lined up on shelves">
+						<h4 class="workshops__card-heading">Topics</h4>
+					</a>
+					<a href="#" class="workshops__card workshops__card_online">
+						<img class="workshops__card-image" src="dist/img/online.jpg" loading="lazy" alt="boy in front of laptop with colorful supplies">
+						<h4 class="workshops__card-heading">Online Workshops</h4>
+					</a>
+					<a href="#" class="workshops__card tutoring__card_hands-on">
+						<img class="workshops__card-image" src="dist/img/hands_on.jpg" loading="lazy" alt="kids with latex gloves gathered around a teacher holding a sheep's brain">
+						<p class="workshops__card-text"><span class="workshops__card-text workshops__card-text_bold">Hands on Learning:</span> Our workshops ignite passion for a topic that follows students far beyond the end of the session.</p>
+					</a>
+					<a class="workshops__button">Learn more about Workshops</a>
+				</div>
+
+				<div class="games">
+					<h3 class="games__heading">Games Raise Grades</h3>
+					<p class="games__intro-text">Mind Bubble's board game library provides opportunities for students to build relationships and think critically while having fun!</p>
+					<a href="#" class="games__card games__card_games">
+						<img class="games__card-image" src="dist/img/games.jpg" loading="lazy" alt="board games set out on a table">
+						<h4 class="games__card-heading">Games</h4>
+					</a>
+					<a href="#" class="games__card games__card_events">
+						<img class="games__card-image" src="dist/img/events.jpg" loading="lazy" alt="people sitting at a table with colorful balloons">
+						<h4 class="games__card-heading">Special Events</h4>
+					</a>
+					<a href="#" class="games__card games__card_community">
+						<img class="games__card-image" src="dist/img/community.jpg" loading="lazy" alt="people at a table playing a board game">
+						<p class="games__card-text"><span class="games__card-text games__card-text_bold">A Light-Hearted Community:</span> Mind Bubble is more than a tutoring company, it's a light-hearted learning community where students build warm relationships while having fun.</p>
+					</a>
+					<a class="games__button">Learn more about Games</a>
+				</div>
+			</section>
+
+			<footer class="footer">
+				<a class="footer__link" href="#">FAQ</a>
+				<p class="footer__text">&copy;2021 Eric Canosa</p>
+			</footer>
+		</main>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 		<script src="dist/js/main.js"></script>
 	</body>
 </html>
