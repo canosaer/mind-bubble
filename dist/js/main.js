@@ -1,2 +1,2 @@
-const preloader=document.querySelector(".preloader"),fadeEffect=setInterval((()=>{preloader.style.opacity||(preloader.style.opacity=1),preloader.style.opacity>0?preloader.style.opacity-=.1:clearInterval(fadeEffect)}),100);window.addEventListener("load",fadeEffect);
+const preloader=document.querySelector(".preloader"),fadeEffect=setInterval((()=>{preloader.style.opacity||(preloader.style.opacity=1),preloader.style.opacity>0?(preloader.classList.contains("bring-to-front")||preloader.classList.add("bring-to-front"),preloader.style.opacity-=.1):(clearInterval(fadeEffect),preloader.classList.remove("bring-to-front"),preloader.classList.add("send-to-rear"))}),100);window.addEventListener("load",fadeEffect);
 //# sourceMappingURL=main.js.map

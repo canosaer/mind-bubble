@@ -135,7 +135,7 @@ table {
 
 /* 
 ==============================================
-CONTENT:	Project Name Here
+CONTENT:	Mind Bubble Landing Page
 AUTHOR:		Eric Canosa
 ==============================================
 
@@ -155,6 +155,7 @@ TABLE OF CONTENTS:
 
 body {
   background: whitesmoke;
+  font-family: "Lucida Sans", sans-serif;
 }
 
 .preloader {
@@ -171,12 +172,217 @@ body {
   top: 0;
   transition: opacity 0.3s linear;
   width: 100%;
-  z-index: 9999;
 }
 .preloader__icon {
   -webkit-filter: brightness(1.01);
           filter: brightness(1.01);
 }
 
+.display-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.top-row {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-columns: (minmax(0, 1fr))[3];
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  position: relative;
+  padding: 1.5rem;
+}
+@media (min-width: 1200px) {
+  .top-row {
+    -ms-grid-columns: (minmax(0, 1fr))[4];
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 1.5rem 4%;
+  }
+}
+
+.toggle {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: left;
+  place-self: center left;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+.toggle__line {
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  transition: all 200ms ease-in-out;
+}
+.toggle__line_1 {
+  margin: auto;
+}
+.toggle__line_2 {
+  margin: auto;
+}
+.toggle__line_open-1 {
+  background: #ed8936;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.toggle__line_open-2 {
+  background: #ed8936;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  width: 0rem;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  padding: 4rem 3.7rem 0 0;
+  transition: width 200ms ease-in-out;
+}
+.menu__item {
+  padding: 1rem 0rem;
+}
+.menu__link {
+  padding: 0.3rem;
+  text-decoration: none;
+  font-size: 1.75rem;
+}
+.menu_open {
+  width: 20.6rem;
+  opacity: 1;
+}
+
+.logo {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: center;
+  place-self: center center;
+  background: url("../../dist/img/logo.png");
+  background-size: cover;
+  background-position: center;
+  height: 5rem;
+  width: 7.35rem;
+  cursor: pointer;
+  position: relative;
+}
+.logo__link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.search-bar {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: right;
+  place-self: center right;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.75rem;
+  width: 1.75rem;
+}
+.search-bar__input {
+  display: none;
+}
+.search-bar__button {
+  border: none;
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  background: whitesmoke;
+}
+.search-bar__button-icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .search-bar {
+    width: 70%;
+    max-width: 15rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 999rem;
+    background: white;
+  }
+  .search-bar__input {
+    display: -webkit-flex;
+    display: flex;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: none;
+    padding: 0.3rem;
+  }
+  .search-bar__button {
+    background: white;
+    border-radius: 999rem;
+    margin: auto 0.1rem auto 0.5rem;
+    height: 80%;
+    width: unset;
+  }
+  .search-bar__button-icon {
+    -webkit-filter: invert(52%) sepia(9%) saturate(19%) hue-rotate(10deg) brightness(95%) contrast(86%);
+            filter: invert(52%) sepia(9%) saturate(19%) hue-rotate(10deg) brightness(95%) contrast(86%);
+  }
+}
 /* 2. Utility ================================ */
+.hidden {
+  display: none;
+}
+
+.dimmer {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
+  left: 0;
+  top: 0;
+}
+
+.send-to-rear {
+  z-index: -99;
+}
+
+.bring-to-front {
+  z-index: 99;
+}
 /*# sourceMappingURL=main.css.map */

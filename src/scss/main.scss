@@ -1,6 +1,6 @@
 /* 
 ==============================================
-CONTENT:	Project Name Here
+CONTENT:	Mind Bubble Landing Page
 AUTHOR:		Eric Canosa
 ==============================================
 
@@ -26,6 +26,7 @@ TABLE OF CONTENTS:
 
 body{
 	background: whitesmoke;
+	font-family:'Lucida Sans', sans-serif;
 }
 
 .preloader {
@@ -39,12 +40,190 @@ body{
 	top: 0;
 	transition: opacity 0.3s linear;
 	width: 100%;
-	z-index: 9999;
 
 	&__icon{
 		filter: brightness(1.01);
 	}
-  }
+}
+
+.display-grid{
+	@include mixins.default-grid;
+}
+
+.top-row{
+	@include mixins.default-grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	position: relative;
+	padding: 1.5rem;
+
+	@include mixins.wide-screen{
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		padding: 1.5rem 4%;
+	}
+
+}
+
+.toggle{
+	grid-column: 1/2;
+	place-self: center left;
+	display: flex;
+	flex-direction: column;
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+	position: relative;
+	
+
+	&__line{
+		width: 100%;
+		height: 0.2rem;
+		background: black;
+		transition: all 200ms ease-in-out;
+
+		&_1{
+			margin: auto;
+		}
+
+		&_2{
+			margin: auto;
+		}
+
+		&_open-1{
+			@include mixins.open-line;
+			transform: rotate(45deg);
+		}
+
+		&_open-2{
+			@include mixins.open-line;
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+.menu{
+	position: absolute;
+	width: 0rem;
+	opacity: 0;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	@include mixins.default-grid;
+	padding: 4rem 3.7rem 0 0;
+	transition: width 200ms ease-in-out;
+
+	&__item{
+		padding: 1rem 0rem;
+	}
+
+	&__link{
+		padding: 0.3rem;
+		text-decoration: none;
+		font-size: 1.75rem;
+	}
+
+	&_open{
+		width: 20.6rem;
+		opacity: 1;
+	}
+
+}
+
+.logo{
+	grid-column: 2/3;
+	place-self: center center;
+	background: url("../../dist/img/logo.png");
+	@include mixins.default-background;
+	height: 5rem;
+	width: 7.35rem;
+	cursor: pointer;
+	position: relative;
+
+	&__link{
+		@include mixins.cover-parent;
+	}
+}
+
+.search-bar{
+	grid-column: 3/4;
+	place-self: center right;
+	display: flex;
+	height: 1.75rem;
+	width: 1.75rem;
+
+	&__input{
+		display: none;
+	}
+
+	&__button{
+		border: none;
+		position: relative;
+		cursor: pointer;
+		height: 100%;
+		width: 100%;
+		background: whitesmoke;
+	}
+
+	&__button-icon{
+		@include mixins.cover-parent;
+	}
+}
+
+@include mixins.landscape{
+	.search-bar{
+		width: 70%;
+		max-width: 15rem;
+		border: 1px solid rgba(0,0,0,0.5);
+		border-radius: 999rem;
+		background: white;
+	
+		&__input{
+			display: flex;
+			outline: none;
+			border: none;
+			width: 100%;
+			height: 100%;
+			background: none;
+			padding: 0.3rem;
+		}
+	
+		&__button{
+			background: white;
+			border-radius: 999rem;
+			margin: auto 0.1rem auto 0.5rem;
+			height: 80%;
+			width: unset;
+		}
+	
+		&__button-icon{
+			filter: invert(52%) sepia(9%) saturate(19%) hue-rotate(10deg) brightness(95%) contrast(86%);
+	
+		}
+	}
+}
+
 
 
 /* 2. Utility ================================ */
+
+.hidden{
+	display: none;
+}
+
+.dimmer{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.5;
+	left: 0;
+	top: 0;
+}
+
+.send-to-rear{
+	z-index: -99;
+}
+
+.bring-to-front{
+	z-index: 99;
+}

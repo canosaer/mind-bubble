@@ -8,10 +8,15 @@ const fadeEffect = setInterval(() => {
       preloader.style.opacity = 1
     }
     if (preloader.style.opacity > 0) {
+      if(!preloader.classList.contains('bring-to-front')){
+        preloader.classList.add('bring-to-front')
+      }
       preloader.style.opacity -= 0.1
     } else {
       clearInterval(fadeEffect)
+      preloader.classList.remove('bring-to-front')
+      preloader.classList.add('send-to-rear')
     }
   }, 100)
 
-  window.addEventListener('load', fadeEffect)
+window.addEventListener('load', fadeEffect)
