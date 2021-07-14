@@ -72,7 +72,10 @@ body{
 	height: 2rem;
 	cursor: pointer;
 	position: relative;
-	
+
+	@include mixins.wide-screen{
+		display: none;
+	}
 
 	&__line{
 		width: 100%;
@@ -100,6 +103,26 @@ body{
 	}
 }
 
+.logo{
+	grid-column: 2/3;
+	place-self: center center;
+	background: url("../../dist/img/logo.png");
+	@include mixins.default-background;
+	height: 5rem;
+	width: 7.35rem;
+	cursor: pointer;
+	position: relative;
+
+	@include mixins.wide-screen{
+		grid-column: 1/2;
+		place-self: center left;
+	}
+
+	&__link{
+		@include mixins.cover-parent;
+	}
+}
+
 .menu{
 	position: absolute;
 	width: 0rem;
@@ -111,6 +134,28 @@ body{
 	padding: 4rem 3.7rem 0 0;
 	transition: width 200ms ease-in-out;
 
+	@include mixins.wide-screen{
+		grid-row: 1/2;
+		grid-column: 2/4;
+		position: unset;
+		width: unset;
+		opacity: unset;
+		right: unset;
+		top: unset;
+		height: unset;
+		padding: unset;
+		transition: unset;
+	
+		&__list{
+			place-self: center center;
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+		}
+	}
+
+
+	
 	&__item{
 		padding: 1rem 0rem;
 	}
@@ -119,6 +164,15 @@ body{
 		padding: 0.3rem;
 		text-decoration: none;
 		font-size: 1.75rem;
+
+		@include mixins.wide-screen{
+			font-size: 1.25rem;
+			color: black;
+
+			&:hover{
+				color: #ed8936;
+			}
+		}
 	}
 
 	&_open{
@@ -128,27 +182,16 @@ body{
 
 }
 
-.logo{
-	grid-column: 2/3;
-	place-self: center center;
-	background: url("../../dist/img/logo.png");
-	@include mixins.default-background;
-	height: 5rem;
-	width: 7.35rem;
-	cursor: pointer;
-	position: relative;
-
-	&__link{
-		@include mixins.cover-parent;
-	}
-}
-
 .search-bar{
 	grid-column: 3/4;
 	place-self: center right;
 	display: flex;
 	height: 1.75rem;
 	width: 1.75rem;
+
+	@include mixins.wide-screen{
+		grid-column: 4/5;
+	}
 
 	&__input{
 		display: none;
