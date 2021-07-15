@@ -29,6 +29,10 @@ body{
 	font-family:'Lucida Sans', sans-serif;
 }
 
+a{
+	text-decoration: none;
+}
+
 .preloader {
 	align-items: center;
 	background: whitesmoke;
@@ -166,7 +170,7 @@ body{
 		font-size: 1.75rem;
 
 		@include mixins.wide-screen{
-			font-size: 1.25rem;
+			font-size: 1.05rem;
 			color: black;
 
 			&:hover{
@@ -243,6 +247,78 @@ body{
 		}
 	}
 }
+
+.hero{
+	@include mixins.default-grid;
+	height: 37.5rem;
+	background: url("../../dist/img/hero.jpg");
+	@include mixins.default-background;
+	position: relative;
+
+	&__heading{
+		text-align: center;
+		line-height: 1.5;
+		font-size: 2rem;
+		z-index: 1;
+		margin: 10% 3% 0%;
+	}
+
+	&__cta{
+		text-align: center;
+		font-size: 1.05rem;
+		z-index: 1;
+		margin: -4rem 3% 0;
+	}
+
+	&__parent-button{
+		@include mixins.hero-button;
+		margin: -6.5rem 0 4rem 0;
+	}
+
+	&__student-button{
+		@include mixins.hero-button;
+		margin-top: -8rem;
+	}
+
+	&:before{
+		content: "";
+		position: absolute;
+		background: linear-gradient(rgba(245, 245, 245, 1), rgba(245, 245, 245, 0));
+		width: 100%;
+		height: 60%;
+		top: 0;
+		z-index: 0;
+	}
+
+	&:after{
+		content: "";
+		position: absolute;
+		background: linear-gradient(rgba(245, 245, 245, 0), rgba(245, 245, 245, 0.25));
+		width: 100%;
+		height: 40%;
+		bottom: 0;
+		z-index: 0;
+	}
+}
+
+
+.footer{
+	margin-top: 3.5rem;
+	border-top: 1px solid lightgray;
+	padding: 4%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.875rem;
+
+	&__text{
+		color: #909097;
+	}
+
+	&__link{
+		color: blue;
+	}
+}
+
 
 
 

@@ -158,6 +158,10 @@ body {
   font-family: "Lucida Sans", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .preloader {
   -webkit-align-items: center;
           align-items: center;
@@ -341,7 +345,7 @@ body {
 }
 @media (min-width: 1200px) {
   .menu__link {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     color: black;
   }
   .menu__link:hover {
@@ -421,6 +425,105 @@ body {
             filter: invert(52%) sepia(9%) saturate(19%) hue-rotate(10deg) brightness(95%) contrast(86%);
   }
 }
+.hero {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  height: 37.5rem;
+  background: url("../../dist/img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero__heading {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 2rem;
+  z-index: 1;
+  margin: 10% 3% 0%;
+}
+.hero__cta {
+  text-align: center;
+  font-size: 1.05rem;
+  z-index: 1;
+  margin: -4rem 3% 0;
+}
+.hero__parent-button {
+  text-align: center;
+  background: #4d6dd1;
+  color: white;
+  height: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  height: 3rem;
+  width: 20rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  z-index: 1;
+  border-radius: 999rem;
+  margin: -6.5rem 0 4rem 0;
+}
+.hero__parent-button:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+.hero__student-button {
+  text-align: center;
+  background: #4d6dd1;
+  color: white;
+  height: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  height: 3rem;
+  width: 20rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  z-index: 1;
+  border-radius: 999rem;
+  margin-top: -8rem;
+}
+.hero__student-button:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(whitesmoke, rgba(245, 245, 245, 0));
+  width: 100%;
+  height: 60%;
+  top: 0;
+  z-index: 0;
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(rgba(245, 245, 245, 0), rgba(245, 245, 245, 0.25));
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  z-index: 0;
+}
+
+.footer {
+  margin-top: 3.5rem;
+  border-top: 1px solid lightgray;
+  padding: 4%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  font-size: 0.875rem;
+}
+.footer__text {
+  color: #909097;
+}
+.footer__link {
+  color: blue;
+}
+
 /* 2. Utility ================================ */
 .hidden {
   display: none;

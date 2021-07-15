@@ -48,3 +48,21 @@
   top:0;
   left: 0;
 }
+
+@mixin hero-button{
+  text-align: center;
+  background: rgb(77, 109, 209);
+  color: white;
+  height: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  height: 3rem;
+  width: 20rem;
+  justify-self: center;
+  z-index: 1;
+  border-radius: 999rem;
+
+  &:hover{
+    filter:brightness(1.1);
+  }
+}
