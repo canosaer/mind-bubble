@@ -163,14 +163,11 @@ a {
 }
 
 .preloader {
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
   background: whitesmoke;
-  display: -webkit-flex;
   display: flex;
   height: 100vh;
-  -webkit-justify-content: center;
-          justify-content: center;
+  justify-content: center;
   left: 0;
   position: fixed;
   top: 0;
@@ -216,10 +213,8 @@ a {
   -ms-grid-row-align: center;
   -ms-grid-column-align: left;
   place-self: center left;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 2rem;
   height: 2rem;
   cursor: pointer;
@@ -328,15 +323,19 @@ a {
     -ms-grid-row-align: center;
     -ms-grid-column-align: center;
     place-self: center center;
-    display: -webkit-flex;
     display: flex;
     width: 100%;
-    -webkit-justify-content: space-between;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 }
 .menu__item {
-  padding: 1rem 0rem;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .menu__item {
+    display: flex;
+    padding: 1rem 0rem;
+  }
 }
 .menu__link {
   padding: 0.3rem;
@@ -364,7 +363,6 @@ a {
   -ms-grid-row-align: center;
   -ms-grid-column-align: right;
   place-self: center right;
-  display: -webkit-flex;
   display: flex;
   height: 1.75rem;
   width: 1.75rem;
@@ -404,7 +402,6 @@ a {
     background: white;
   }
   .search-bar__input {
-    display: -webkit-flex;
     display: flex;
     outline: none;
     border: none;
@@ -431,11 +428,17 @@ a {
   grid-auto-rows: auto;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  height: 37.5rem;
+  height: 34.35rem;
   background: url("../../dist/img/hero.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
+  margin-bottom: 3.5rem;
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 37.5rem;
+  }
 }
 .hero__heading {
   text-align: center;
@@ -448,7 +451,8 @@ a {
   text-align: center;
   font-size: 1.05rem;
   z-index: 1;
-  margin: -4rem 3% 0;
+  margin: -4rem 3% 2rem;
+  line-height: 1.5;
 }
 .hero__parent-button {
   text-align: center;
@@ -507,21 +511,476 @@ a {
   z-index: 0;
 }
 
+.programs {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+.programs__heading {
+  font-size: 1.9rem;
+  position: relative;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 3.5rem;
+}
+.programs__heading:after {
+  content: "";
+  position: absolute;
+  background: #4d6dd1;
+  width: 15.5rem;
+  height: 0.3rem;
+  bottom: -1.25rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.tutoring {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-columns: (minmax(0, 1fr))[3];
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 5rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+.tutoring__heading {
+  grid-column: 1/-1;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+.tutoring__intro-text {
+  grid-column: 1/-1;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0rem auto 2rem;
+  width: 90%;
+}
+.tutoring__card {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  box-shadow: 0px 1px 8px -2px rgba(0, 0, 0, 0.75);
+  width: 90%;
+  margin: 0 auto 1.9rem;
+  grid-column: 1/-1;
+}
+@media (min-width: 768px) {
+  .tutoring__card {
+    width: unset;
+    margin: unset;
+    grid-column: unset;
+  }
+  .tutoring__card_tutors {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    width: 90%;
+    margin-bottom: 1rem;
+    -ms-grid-column-align: right;
+        justify-self: right;
+  }
+  .tutoring__card_schedule {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    width: 90%;
+    -ms-grid-column-align: right;
+        justify-self: right;
+  }
+  .tutoring__card_grades {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    grid-row: 3/5;
+    margin-left: 1rem;
+    width: 90%;
+    height: 100%;
+    -ms-grid-column-align: left;
+        justify-self: left;
+  }
+}
+.tutoring__image-slot {
+  height: 0;
+  position: relative;
+  padding-bottom: 65%;
+}
+@media (min-width: 768px) {
+  .tutoring__image-slot {
+    padding-bottom: 70%;
+  }
+}
+.tutoring__card-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.tutoring__card-heading {
+  color: black;
+  font-weight: bold;
+  padding: 1.5rem;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .tutoring__card-heading {
+    padding: 0.85rem 1.5rem;
+  }
+}
+.tutoring__card-text {
+  font-weight: normal;
+}
+.tutoring__button {
+  text-align: center;
+  background: #4d6dd1;
+  color: white;
+  height: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  height: 3rem;
+  width: 20rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  z-index: 1;
+  border-radius: 999rem;
+  grid-column: 1/-1;
+}
+.tutoring__button:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+@media (min-width: 768px) {
+  .tutoring__button {
+    margin-top: 3rem;
+  }
+}
+
+.workshops {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-columns: (minmax(0, 1fr))[3];
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 5rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+.workshops__heading {
+  grid-column: 1/-1;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+.workshops__intro-text {
+  grid-column: 1/-1;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0rem auto 2rem;
+  width: 90%;
+}
+.workshops__card {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  box-shadow: 0px 1px 8px -2px rgba(0, 0, 0, 0.75);
+  width: 90%;
+  margin: 0 auto 1.9rem;
+  grid-column: 1/-1;
+}
+@media (min-width: 768px) {
+  .workshops__card {
+    width: unset;
+    margin: unset;
+    grid-column: unset;
+  }
+  .workshops__card_topics {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    width: 90%;
+    margin-bottom: 1rem;
+    -ms-grid-column-align: right;
+        justify-self: right;
+  }
+  .workshops__card_online {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    width: 90%;
+    -ms-grid-column-align: right;
+        justify-self: right;
+  }
+  .workshops__card_hands-on {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    grid-row: 3/5;
+    margin-left: 1rem;
+    width: 90%;
+    height: 100%;
+    -ms-grid-column-align: left;
+        justify-self: left;
+  }
+}
+.workshops__image-slot {
+  height: 0;
+  position: relative;
+  padding-bottom: 65%;
+}
+@media (min-width: 768px) {
+  .workshops__image-slot {
+    padding-bottom: 70%;
+  }
+}
+.workshops__card-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.workshops__card-heading {
+  color: black;
+  font-weight: bold;
+  padding: 1.5rem;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .workshops__card-heading {
+    padding: 0.85rem 1.5rem;
+  }
+}
+.workshops__card-text {
+  font-weight: normal;
+}
+.workshops__button {
+  text-align: center;
+  background: #4d6dd1;
+  color: white;
+  height: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  height: 3rem;
+  width: 20rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  z-index: 1;
+  border-radius: 999rem;
+  grid-column: 1/-1;
+}
+.workshops__button:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+@media (min-width: 768px) {
+  .workshops__button {
+    margin-top: 3rem;
+  }
+}
+
+.games {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-columns: (minmax(0, 1fr))[3];
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 5rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+.games__heading {
+  grid-column: 1/-1;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+.games__intro-text {
+  grid-column: 1/-1;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0rem auto 2rem;
+  width: 90%;
+}
+.games__card {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  box-shadow: 0px 1px 8px -2px rgba(0, 0, 0, 0.75);
+  width: 90%;
+  margin: 0 auto 1.9rem;
+  grid-column: 1/-1;
+}
+@media (min-width: 768px) {
+  .games__card {
+    width: unset;
+    margin: unset;
+    grid-column: unset;
+  }
+  .games__card_games {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    width: 90%;
+    margin-bottom: 1rem;
+    -ms-grid-column-align: right;
+        justify-self: right;
+  }
+  .games__card_events {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    width: 90%;
+    -ms-grid-column-align: right;
+        justify-self: right;
+  }
+  .games__card_community {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    grid-row: 3/5;
+    margin-left: 1rem;
+    width: 90%;
+    height: 100%;
+    -ms-grid-column-align: left;
+        justify-self: left;
+  }
+}
+.games__image-slot {
+  height: 0;
+  position: relative;
+  padding-bottom: 65%;
+}
+@media (min-width: 768px) {
+  .games__image-slot {
+    padding-bottom: 70%;
+  }
+}
+.games__card-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.games__card-heading {
+  color: black;
+  font-weight: bold;
+  padding: 1.5rem;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .games__card-heading {
+    padding: 0.85rem 1.5rem;
+  }
+}
+.games__card-text {
+  font-weight: normal;
+}
+.games__button {
+  text-align: center;
+  background: #4d6dd1;
+  color: white;
+  height: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  height: 3rem;
+  width: 20rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  z-index: 1;
+  border-radius: 999rem;
+  grid-column: 1/-1;
+}
+.games__button:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+@media (min-width: 768px) {
+  .games__button {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .width-fixer {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-rows: auto;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-columns: 0.05fr 1fr 0.05fr;
+    grid-template-columns: 0.05fr 1fr 0.05fr;
+  }
+}
+@media (min-width: 1200px) {
+  .width-fixer {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-rows: auto;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-columns: 0.25fr 1fr 0.25fr;
+    grid-template-columns: 0.25fr 1fr 0.25fr;
+  }
+}
+
 .footer {
   margin-top: 3.5rem;
   border-top: 1px solid lightgray;
   padding: 4%;
-  display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
+  justify-content: space-between;
   font-size: 0.875rem;
 }
 .footer__text {
   color: #909097;
 }
 .footer__link {
-  color: blue;
+  color: #4d6dd1;
 }
 
 /* 2. Utility ================================ */

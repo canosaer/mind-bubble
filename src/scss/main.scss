@@ -161,7 +161,12 @@ a{
 
 	
 	&__item{
-		padding: 1rem 0rem;
+		display: none;
+
+		@include mixins.wide-screen{
+			display: flex;
+			padding: 1rem 0rem;
+		}
 	}
 
 	&__link{
@@ -250,10 +255,15 @@ a{
 
 .hero{
 	@include mixins.default-grid;
-	height: 37.5rem;
+	height: 34.35rem;
 	background: url("../../dist/img/hero.jpg");
 	@include mixins.default-background;
 	position: relative;
+	margin-bottom: 3.5rem;
+
+	@include mixins.landscape{
+		height: 37.5rem;
+	}
 
 	&__heading{
 		text-align: center;
@@ -267,16 +277,17 @@ a{
 		text-align: center;
 		font-size: 1.05rem;
 		z-index: 1;
-		margin: -4rem 3% 0;
+		margin: -4rem 3% 2rem;
+		line-height: 1.5;
 	}
 
 	&__parent-button{
-		@include mixins.hero-button;
+		@include mixins.button;
 		margin: -6.5rem 0 4rem 0;
 	}
 
 	&__student-button{
-		@include mixins.hero-button;
+		@include mixins.button;
 		margin-top: -8rem;
 	}
 
@@ -301,6 +312,252 @@ a{
 	}
 }
 
+.programs{
+	@include mixins.default-grid;
+
+	&__heading{
+		font-size: 1.9rem;
+		position: relative;
+		text-align: center;
+		line-height: 1.5;
+		margin-bottom: 3.5rem;
+
+		&:after{
+			content: "";
+			position: absolute;
+			background: rgb(77, 109, 209);
+			width: 15.5rem;
+			height: 0.3rem;
+			bottom: -1.25rem;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+.tutoring{
+	@include mixins.default-grid;
+	@include mixins.program-section-formatting;
+
+	&__heading{
+		@include mixins.program-section-heading;
+	}
+
+	&__intro-text{
+		@include mixins.program-section-intro;
+	}
+
+	&__card{
+		@include mixins.default-grid;
+		@include mixins.program-card-formatting;
+
+		@include mixins.landscape{
+			@include mixins.program-card-reset;
+
+			&_tutors{
+				@include mixins.program-card-top-left;
+			}
+
+			&_schedule{
+				@include mixins.program-card-bottom-left;
+			}
+
+			&_grades{
+				@include mixins.program-card-right;
+			}
+
+		}
+	}
+
+	&__image-slot{
+		@include mixins.image-slot;
+		padding-bottom: 65%;
+
+		@include mixins.landscape{
+			padding-bottom: 70%;
+		}
+	}
+
+	&__card-image{
+		@include mixins.cover-parent;
+		@include mixins.default-img;
+	}
+
+	&__card-heading{
+		@include mixins.program-card-heading;
+
+		@include mixins.landscape{
+			padding: 0.85rem 1.5rem;
+		}
+	}
+
+	&__card-text{
+		font-weight: normal;
+	}
+
+	&__button{
+		@include mixins.button;
+		grid-column: 1/-1;
+
+		@include mixins.landscape{
+			margin-top: 3rem;
+		}
+	}
+}
+
+.workshops{
+	@include mixins.default-grid;
+	@include mixins.program-section-formatting;
+
+	&__heading{
+		@include mixins.program-section-heading;
+	}
+
+	&__intro-text{
+		@include mixins.program-section-intro;
+	}
+
+	&__card{
+		@include mixins.default-grid;
+		@include mixins.program-card-formatting;
+
+		@include mixins.landscape{
+			@include mixins.program-card-reset;
+
+			&_topics{
+				@include mixins.program-card-top-left;
+			}
+
+			&_online{
+				@include mixins.program-card-bottom-left;
+			}
+
+			&_hands-on{
+				@include mixins.program-card-right;
+			}
+
+		}
+	}
+
+	&__image-slot{
+		@include mixins.image-slot;
+		padding-bottom: 65%;
+
+		@include mixins.landscape{
+			padding-bottom: 70%;
+		}
+	}
+
+	&__card-image{
+		@include mixins.cover-parent;
+		@include mixins.default-img;
+	}
+
+	&__card-heading{
+		@include mixins.program-card-heading;
+
+		@include mixins.landscape{
+			padding: 0.85rem 1.5rem;
+		}
+	}
+
+	&__card-text{
+		font-weight: normal;
+	}
+
+	&__button{
+		@include mixins.button;
+		grid-column: 1/-1;
+
+		@include mixins.landscape{
+			margin-top: 3rem;
+		}
+	}
+}
+
+.games{
+	@include mixins.default-grid;
+	@include mixins.program-section-formatting;
+
+	&__heading{
+		@include mixins.program-section-heading;
+	}
+
+	&__intro-text{
+		@include mixins.program-section-intro;
+	}
+
+	&__card{
+		@include mixins.default-grid;
+		@include mixins.program-card-formatting;
+
+		@include mixins.landscape{
+			@include mixins.program-card-reset;
+
+			&_games{
+				@include mixins.program-card-top-left;
+			}
+
+			&_events{
+				@include mixins.program-card-bottom-left;
+			}
+
+			&_community{
+				@include mixins.program-card-right;
+			}
+
+		}
+	}
+
+	&__image-slot{
+		@include mixins.image-slot;
+		padding-bottom: 65%;
+
+		@include mixins.landscape{
+			padding-bottom: 70%;
+		}
+	}
+
+	&__card-image{
+		@include mixins.cover-parent;
+		@include mixins.default-img;
+	}
+
+	&__card-heading{
+		@include mixins.program-card-heading;
+
+		@include mixins.landscape{
+			padding: 0.85rem 1.5rem;
+		}
+	}
+
+	&__card-text{
+		font-weight: normal;
+	}
+
+	&__button{
+		@include mixins.button;
+		grid-column: 1/-1;
+
+		@include mixins.landscape{
+			margin-top: 3rem;
+		}
+	}
+}
+
+.width-fixer{
+	@include mixins.landscape{
+		@include mixins.default-grid;
+		grid-template-columns: 0.05fr 1fr 0.05fr;
+	}
+
+	@include mixins.wide-screen{
+		@include mixins.default-grid;
+		grid-template-columns: 0.25fr 1fr 0.25fr;
+	}
+	
+}
+
 
 .footer{
 	margin-top: 3.5rem;
@@ -315,7 +572,7 @@ a{
 	}
 
 	&__link{
-		color: blue;
+		color: rgb(77, 109, 209);
 	}
 }
 
