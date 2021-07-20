@@ -94,6 +94,7 @@
   width: 90%;
   margin: 0 auto 1.9rem;
   grid-column: 1/-1;
+  border-radius: 0.7rem;
 }
 
 @mixin program-card-reset{
@@ -135,4 +136,9 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 	margin-bottom: 5rem;
   grid-column: 2/3;
+}
+
+@mixin card-image-styling{
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
 }
