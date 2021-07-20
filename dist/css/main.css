@@ -454,6 +454,14 @@ a {
   margin: -4rem 3% 2rem;
   line-height: 1.5;
 }
+.hero__menu {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
 .hero__parent-button {
   text-align: center;
   background: #4d6dd1;
@@ -467,13 +475,14 @@ a {
       justify-self: center;
   z-index: 1;
   border-radius: 999rem;
+  cursor: pointer;
   margin: -6.5rem 0 4rem 0;
 }
 .hero__parent-button:hover {
   -webkit-filter: brightness(1.1);
           filter: brightness(1.1);
 }
-.hero__student-button {
+.hero__volunteer-button {
   text-align: center;
   background: #4d6dd1;
   color: white;
@@ -486,11 +495,15 @@ a {
       justify-self: center;
   z-index: 1;
   border-radius: 999rem;
-  margin-top: -8rem;
+  cursor: pointer;
+  margin-top: -6.5rem;
 }
-.hero__student-button:hover {
+.hero__volunteer-button:hover {
   -webkit-filter: brightness(1.1);
           filter: brightness(1.1);
+}
+.hero__radio {
+  display: none;
 }
 .hero:before {
   content: "";
@@ -664,6 +677,7 @@ a {
       justify-self: center;
   z-index: 1;
   border-radius: 999rem;
+  cursor: pointer;
   grid-column: 1/-1;
 }
 .tutoring__button:hover {
@@ -819,6 +833,7 @@ a {
       justify-self: center;
   z-index: 1;
   border-radius: 999rem;
+  cursor: pointer;
   grid-column: 1/-1;
 }
 .workshops__button:hover {
@@ -958,6 +973,7 @@ a {
       justify-self: center;
   z-index: 1;
   border-radius: 999rem;
+  cursor: pointer;
   grid-column: 1/-1;
 }
 .games__button:hover {

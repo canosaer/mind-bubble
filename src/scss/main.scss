@@ -281,14 +281,23 @@ a{
 		line-height: 1.5;
 	}
 
+	&__menu{
+		@include mixins.default-grid;
+		height: 100%;
+	}
+
 	&__parent-button{
 		@include mixins.button;
 		margin: -6.5rem 0 4rem 0;
 	}
 
-	&__student-button{
+	&__volunteer-button{
 		@include mixins.button;
-		margin-top: -8rem;
+		margin-top: -6.5rem;
+	}
+
+	&__radio{
+		display: none;
 	}
 
 	&:before{
