@@ -277,27 +277,53 @@ a{
 		text-align: center;
 		font-size: 1.05rem;
 		z-index: 1;
-		margin: -4rem 3% 2rem;
+		margin: 0 3% 2rem;
 		line-height: 1.5;
+		padding: 0 3%;
 	}
 
 	&__menu{
 		@include mixins.default-grid;
-		height: 100%;
 	}
 
-	&__parent-button{
+	&__button{
 		@include mixins.button;
-		margin: -6.5rem 0 4rem 0;
+		margin-bottom: 2%;
 	}
 
-	&__volunteer-button{
+	&__last-button{
 		@include mixins.button;
-		margin-top: -6.5rem;
 	}
 
 	&__radio{
 		display: none;
+	}
+
+	&__check-row{
+		z-index: 2;
+		display: flex;
+		width: 15.3rem;
+		justify-self: center;
+		height: 3rem;
+	}
+
+	&__checkbox{
+		transform: scale(2);
+	}
+
+	&__label{
+		margin-left: 2rem;
+		background: rgba(255, 255, 255, 0.9);
+		height: 1.2rem;
+		border-radius: 999rem;
+		font-weight: bold;
+	}
+
+	&__button-row{
+		display: flex;
+		justify-self: center;
+		justify-content: space-between;
+		width: 21rem;
 	}
 
 	&:before{
@@ -319,6 +345,61 @@ a{
 		bottom: 0;
 		z-index: 0;
 	}
+}
+
+.back-button{
+	display: flex;
+	background: none;
+	border: none;
+	height: 1.75rem;
+	width: 5.3rem;
+	cursor: pointer;
+	z-index: 2;
+	justify-self: center;
+	background: rgba(128, 128, 128, 0.9);
+	color: white;
+	border-radius: 999rem;
+
+	&__icon{
+		font-size: 1.8rem;
+		align-self: center;
+	}
+
+	&__text{
+		font-size: 1.25rem;
+		margin-left: 0.4rem;
+		align-self: center;
+	}
+
+	&:hover{
+		filter:brightness(1.1);
+	  }
+}
+
+.continue-button{
+	display: flex;
+	background: none;
+	border: none;
+	height: 1.75rem;
+	width: 12rem;
+	cursor: pointer;
+	z-index: 2;
+	justify-self: center;
+	background: rgb(77, 109, 209);
+	color: white;
+	border-radius: 999rem;
+	font-size: 1.25rem;
+
+	&__text{
+		font-size: 1.25rem;
+		margin: 0 auto;
+		align-self: center;
+	}
+
+
+	&:hover{
+		filter:brightness(1.1);
+		}
 }
 
 .programs{
@@ -608,6 +689,14 @@ a{
 
 .hidden{
 	display: none;
+}
+
+.transparent{
+	opacity: 0;
+}
+
+.opaque{
+	opacity: 1;
 }
 
 .dimmer{

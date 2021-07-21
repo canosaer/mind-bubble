@@ -18,7 +18,7 @@
 
 		<main class="display-grid">
 			<header class="top-row">
-				<figure class="toggle">
+				<figure class="toggle" tabindex="0">
 					<div class="toggle__line toggle__line_1"></div>
 					<div class="toggle__line toggle__line_2"></div>
 				</figure>
@@ -45,13 +45,39 @@
 
 			<section class="hero">
 				<h1 class="hero__heading">Mind Bubble<br>Tutoring, Workshops, and Games</h1>
-				<h2 class="hero__cta">Join our light-hearted learning community!</h2>
-				<form class="hero__menu">
+				<form class="hero__menu hero__menu_0 hidden">
+					<h2 class="hero__cta">Join our light-hearted learning community!</h2>
 					<input type="radio" name="parent" id="parent" class="hero__radio">
-					<label class="hero__parent-button" for="parent">I'm a Parent or Guardian</label>
+					<label class="hero__button" for="parent" tabindex="0">I'm a Parent or Guardian</label>
 					<input type="radio" name="volunteer" id="volunteer" class="hero__radio">
-					<label class="hero__volunteer-button" for="volunteer">I'm a Volunteer</label>
+					<label class="hero__last-button" for="volunteer" tabindex="0">I'm a Volunteer</label>
 				</form>
+				<form class="hero__menu hero__menu_1 hidden">
+					<h2 class="hero__cta">Which programs are you interested in?</h2>
+					<fieldset class="hero__check-row">
+						<input type="checkbox" name="tutoring" id="tutoring" class="hero__checkbox">
+						<label class="hero__label" for="tutoring">1-on-1 Tutoring</label>
+					</fieldset>
+					<fieldset class="hero__check-row">
+						<input type="checkbox" name="workshops" id="workshops" class="hero__checkbox">
+						<label class="hero__label" for="workshops">Educational Workshops</label>
+					</fieldset>
+				</form>
+				<form class="hero__menu hero__menu_2">
+					<label for="username" class="hero__cta">What is your name?</label>
+					<input name="username" id="username" class="hero__name-input">
+				</form>
+				<div class="hero__button-row">
+					<button class="back-button">
+						<i class="fas fa-caret-left back-button__icon"></i>
+						<p class="back-button__text">Back</p>
+					</button>
+					<button class="continue-button">
+						<p class="continue-button__text">Continue</p>
+					</button>
+				</div>
+				
+
 			</section>
 
 			<section class="programs">
