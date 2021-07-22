@@ -627,6 +627,13 @@ a {
           filter: brightness(1.1);
 }
 
+.sign-up {
+  font-size: 1.25rem;
+  margin: 0 auto;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .programs {
   display: -ms-grid;
   display: grid;

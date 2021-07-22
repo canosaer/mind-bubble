@@ -410,6 +410,12 @@ a{
 		}
 }
 
+.sign-up{
+	font-size: 1.25rem;
+		margin: 0 auto;
+		align-self: center;
+}
+
 .programs{
 	@include mixins.default-grid;
 
@@ -736,7 +742,6 @@ a{
 		position: relative;
 	}
 }
-
 
 
 
