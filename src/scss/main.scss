@@ -410,12 +410,6 @@ a{
 		}
 }
 
-.sign-up{
-	font-size: 1.25rem;
-		margin: 0 auto;
-		align-self: center;
-}
-
 .programs{
 	@include mixins.default-grid;
 
@@ -683,7 +677,7 @@ a{
 .footer{
 	margin-top: 3.5rem;
 	border-top: 1px solid lightgray;
-	padding: 4%;
+	padding: 5.25rem 4%;
 	display: flex;
 	justify-content: space-between;
 	font-size: 0.875rem;
@@ -716,30 +710,32 @@ a{
 		padding: 0.7rem;
 		cursor: pointer;
 		position: relative;
-
-		&:after{
-			content: "";
-			position: absolute;
-			border-top: 2px solid white;
-			border-right: 2px solid white;
-			width: 10px;
-			height: 10px;
-			left: 0.55rem;
-			top: 0.9rem;
-			transform: rotate(45deg);
-		}
+		border-top-left-radius: 0.6rem;
+		border-top-right-radius: 0.6rem;
 
 		&:hover{
 			filter: brightness(1.1);
 		}
 	}
 
+	&__arrow{
+		position: absolute;
+		border-top: 2px solid white;
+		border-right: 2px solid white;
+		width: 10px;
+		height: 10px;
+		left: 0.55rem;
+		top: 0.9rem;
+		transform: rotate(45deg);
+	}
+
 	&__answer{
-		// padding: 0.7rem;
 		padding: 0.25rem;
 		height: 0;
 		opacity: 0;
 		position: relative;
+		color: black;
+		cursor: text;
 	}
 }
 
@@ -776,4 +772,14 @@ a{
 
 .bring-to-front{
 	z-index: 99;
+}
+
+.answer-expander{
+	height: unset;
+	opacity: unset;
+	padding: 0.7rem;
+}
+
+.answer-arrow-rotate{
+	transform: rotate(135deg);
 }
