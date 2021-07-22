@@ -143,3 +143,14 @@
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
 }
+
+@mixin hero-input-field{
+  width: 21rem;
+  justify-self: center;
+  z-index: 2;
+  font-size: 1.05rem;
+  padding: 0.35rem;
+  height: 2.0rem;
+  margin-top: -2.25rem;
+  text-align: center;
+}

@@ -530,6 +530,28 @@ a {
   justify-content: space-between;
   width: 21rem;
 }
+.hero__name-input {
+  width: 21rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  z-index: 2;
+  font-size: 1.05rem;
+  padding: 0.35rem;
+  height: 2rem;
+  margin-top: -2.25rem;
+  text-align: center;
+}
+.hero__email-input {
+  width: 21rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  z-index: 2;
+  font-size: 1.05rem;
+  padding: 0.35rem;
+  height: 2rem;
+  margin-top: -2.25rem;
+  text-align: center;
+}
 .hero:before {
   content: "";
   position: absolute;
@@ -939,6 +961,7 @@ a {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
+  margin-bottom: 1.85rem;
 }
 .games__heading {
   grid-column: 1/-1;
@@ -1101,8 +1124,51 @@ a {
 .footer__text {
   color: #909097;
 }
-.footer__link {
+
+.faq {
   color: #4d6dd1;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.faq__accordion {
+  font-size: 1rem;
+  position: absolute;
+  top: -3.9rem;
+  left: 3rem;
+  width: 16rem;
+  border: 2px solid black;
+  border-radius: 0.7rem;
+}
+.faq__heading {
+  background: #4d6dd1;
+  color: white;
+  padding: 0.7rem;
+  cursor: pointer;
+  position: relative;
+}
+.faq__heading:after {
+  content: "";
+  position: absolute;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  width: 10px;
+  height: 10px;
+  left: 0.55rem;
+  top: 0.9rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.faq__heading:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+.faq__answer {
+  padding: 0.25rem;
+  height: 0;
+  opacity: 0;
+  position: relative;
 }
 
 /* 2. Utility ================================ */

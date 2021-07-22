@@ -45,7 +45,7 @@
 
 			<section class="hero">
 				<h1 class="hero__heading">Mind Bubble<br>Tutoring, Workshops, and Games</h1>
-				<form class="hero__menu hero__menu_0 hidden">
+				<form class="hero__menu hero__menu_0">
 					<h2 class="hero__cta">Join our light-hearted learning community!</h2>
 					<input type="radio" name="parent" id="parent" class="hero__radio">
 					<label class="hero__button" for="parent" tabindex="0">I'm a Parent or Guardian</label>
@@ -63,11 +63,15 @@
 						<label class="hero__label" for="workshops">Educational Workshops</label>
 					</fieldset>
 				</form>
-				<form class="hero__menu hero__menu_2">
+				<form class="hero__menu hero__menu_2 hidden">
 					<label for="username" class="hero__cta">What is your name?</label>
 					<input name="username" id="username" class="hero__name-input">
 				</form>
-				<div class="hero__button-row">
+				<form class="hero__menu hero__menu_3 hidden">
+					<label for="email" class="hero__cta">What is your email address?</label>
+					<input name="email" id="email" class="hero__email-input">
+				</form>
+				<div class="hero__button-row transparent">
 					<button class="back-button">
 						<i class="fas fa-caret-left back-button__icon"></i>
 						<p class="back-button__text">Back</p>
@@ -163,7 +167,17 @@
 			</section>
 
 			<footer class="footer">
-				<a class="footer__link" href="#">FAQ</a>
+				<button class="faq">
+					<p class="faq__text">FAQ</p>
+					<div class="faq__accordion hidden">
+						<h5 class="faq__heading">What is Mind Bubble?</h5>
+						<p class="faq__answer">Lorem Ipsum</p>
+						<h5 class="faq__heading">How do I vounteer?</h5>
+						<p class="faq__answer">Lorem Ipsum</p>
+						<h5 class="faq__heading">Why is Mind Bubble Free?</h5>
+						<p class="faq__answer">Lorem ipsum</p>
+					</div>
+				</button>
 				<p class="footer__text">&copy;2021 Mind Bubble</p>
 			</footer>
 		</main>
