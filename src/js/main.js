@@ -98,7 +98,7 @@ class HeroMenu{
 
 class FAQ{
   constructor(){
-    this.faqText = document.querySelector('.faq__text')
+    this.faqButton = document.querySelector('.faq')
     this.accordion = document.querySelector('.faq__accordion')
     this.faqHeadings = this.accordion.querySelectorAll('.faq__heading')
     this.faqAnswers = this.accordion.querySelectorAll('.faq__answer')
@@ -107,7 +107,7 @@ class FAQ{
   }
 
   setupListeners = () => {
-    this.faqText.addEventListener('click', this.toggleFAQ)
+    this.faqButton.addEventListener('click', this.toggleFAQ)
     this.faqHeadings.forEach(heading => {
       heading.addEventListener('click', this.toggleAnswer)
     });

@@ -72,11 +72,11 @@
 					<input name="email" id="email" class="hero__email-input">
 				</form>
 				<nav class="hero__button-row transparent">
-					<button class="back-button">
+					<button class="back-button" tabindex="-1">
 						<i class="fas fa-caret-left back-button__icon"></i>
 						<p class="back-button__text">Back</p>
 					</button>
-					<button class="continue-button">
+					<button class="continue-button" tabindex="-1">
 						<p class="continue-button__text">Continue</p>
 					</button>
 				</nav>
@@ -167,8 +167,8 @@
 			</section>
 
 			<footer class="footer">
-				<button class="faq">
-					<p class="faq__text" id="faq">FAQ</p>
+				<button class="faq" role="list">
+					<p class="faq__text" id="faq" role="button">FAQ</p>
 					<div class="faq__accordion hidden" aria-labelledby="faq">
 						<h5 class="faq__heading" id="about" tabindex="0"><div class="faq__arrow"></div>What is Mind Bubble?</h5>
 						<p class="faq__answer" aria-labelledby="about">Lorem Ipsum</p>
