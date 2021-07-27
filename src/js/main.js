@@ -38,6 +38,7 @@ class HeroMenu{
     this.programMenu = this.heroSection.querySelector('.hero__menu_1')
     this.nameMenu = this.heroSection.querySelector('.hero__menu_2')
     this.emailMenu = this.heroSection.querySelector('.hero__menu_3')
+    this.lastMenu = this.heroSection.querySelector('.hero__menu_4')
     this.heroNav = this.heroSection.querySelector('.hero__button-row')
 
     this.parentButton = this.defaultMenu.querySelector('.hero__button')
@@ -71,6 +72,11 @@ class HeroMenu{
       this.nameMenu.classList.toggle('hidden')
       this.emailMenu.classList.toggle('hidden')
       this.heroNavContinueText.textContent = 'Sign Up!'
+    }
+    else if(!this.emailMenu.classList.contains('hidden')){
+      this.emailMenu.classList.toggle('hidden')
+      this.lastMenu.classList.toggle('hidden')
+      this.heroNavContinueText.textContent = 'Start Over'
     }
   }
 

@@ -66,17 +66,22 @@
 				<form class="hero__menu hero__menu_2 hidden">
 					<label for="username" class="hero__cta">What is your name?</label>
 					<input name="username" id="username" class="hero__name-input">
+					<p class="hero__validation hero__validation_name invisible">Enter your name to continue</p>
 				</form>
 				<form class="hero__menu hero__menu_3 hidden">
 					<label for="email" class="hero__cta">What is your email address?</label>
 					<input name="email" id="email" class="hero__email-input">
+					<p class="hero__validation hero__validation_email invisible">Enter your name to continue</p>
 				</form>
-				<nav class="hero__button-row transparent">
-					<button class="back-button" tabindex="-1">
+				<form class="hero__menu hero__menu_4 hidden">
+					<h2 class="hero__cta">Thanks for signing up! Check your email for more information!</h2>
+				</form>
+				<nav class="hero__button-row invisible">
+					<button class="back-button">
 						<i class="fas fa-caret-left back-button__icon"></i>
 						<p class="back-button__text">Back</p>
 					</button>
-					<button class="continue-button" tabindex="-1">
+					<button class="continue-button">
 						<p class="continue-button__text">Continue</p>
 					</button>
 				</nav>

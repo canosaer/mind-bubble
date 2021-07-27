@@ -556,6 +556,15 @@ a {
   margin-top: -2.25rem;
   text-align: center;
 }
+.hero__validation {
+  text-align: center;
+  color: red;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999rem;
+  height: 1.2rem;
+  width: 14rem;
+}
 .hero:before {
   content: "";
   position: absolute;
@@ -1183,12 +1192,12 @@ a {
   display: none;
 }
 
-.transparent {
-  opacity: 0;
+.invisible {
+  visibility: hidden;
 }
 
-.opaque {
-  opacity: 1;
+.transparent {
+  opacity: 0;
 }
 
 .dimmer {
