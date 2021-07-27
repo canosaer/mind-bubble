@@ -12,9 +12,6 @@ class Preloader{
 
   fadeEffect = () => {
     setInterval(() => {
-      // if we don't set opacity 1 in CSS, then
-      // it will be equaled to "" -- that's why
-      // we check it, and if so, set opacity to 1
       if (!this.preloader.style.opacity) {
         this.preloader.style.opacity = 1
       }
@@ -96,6 +93,62 @@ class HeroMenu{
 
 }
 
+class MenuToggle{
+  
+  constructor(){
+      this.toggle = document.querySelector(`.toggle`)
+      this.siteNavigation = document.querySelector(`.menu`)
+      this.siteNavigationItems = document.querySelectorAll(`.menu__item`)
+      this.siteNavigationLinks = document.querySelectorAll(`.menu__link`)
+      this.toggleLines = document.querySelectorAll(`.toggle__line`)
+
+      this.setupListeners()
+  }
+
+  setupListeners() {
+
+      this.toggle.addEventListener(`click`, this.handleToggleClick)
+  }
+
+  handleToggleClick = (evt) => {
+      if(!this.siteNavigation.classList.contains(`menu_open`)){
+          this.dimmer = document.createElement("div")
+          this.dimmer.classList.add(`dimmer`)
+          document.querySelector(`body`).appendChild(this.dimmer)
+          document.querySelector(`body`).style.overflowX = `hidden`
+          this.siteNavigation.classList.toggle(`menu_open`)
+          this.toggleLines[0].classList.toggle(`toggle__line_open-1`)
+          this.toggleLines[1].classList.toggle(`toggle__line_open-2`)
+          this.siteNavigationItems.forEach(item => {
+            item.classList.toggle(`menu__item_open`)
+          });
+          if(this.siteNavigationLinks[0].classList.contains('hide-link')){
+            this.siteNavigationLinks.forEach(link => {
+              link.classList.toggle(`hide-link`)
+            });
+          }
+          
+          setTimeout(() => { this.siteNavigation.style.width = `20.6rem` }, 10);
+      }
+      else{
+          this.siteNavigation.style.width = `0`
+          this.dimmer.remove()
+          this.siteNavigationLinks.forEach(link => {
+            link.classList.toggle(`hide-link`)
+          });
+          setTimeout(() => { 
+              this.siteNavigation.classList.toggle(`menu_open`)
+              this.toggleLines[0].classList.toggle(`toggle__line_open-1`)
+              this.toggleLines[1].classList.toggle(`toggle__line_open-2`)
+              this.siteNavigationItems.forEach(item => {
+                item.classList.toggle(`menu__item_open`)
+              });
+              document.querySelector(`body`).style.overflowX = `visible`
+          }, 200);                
+      }
+  }
+}
+
 class FAQ{
   constructor(){
     this.faqText = document.querySelector('.faq__text')
@@ -145,3 +198,23 @@ class FAQ{
 new Preloader
 new HeroMenu
 new FAQ
+new MenuToggle
+
+const navMenu = document.querySelector('.menu')
+const navLinks = document.querySelectorAll('.menu__link')
+
+function fixNav() {
+
+  if(window.innerWidth >= 1200){
+    navMenu.style.width = '100%'
+    let dimmerElement = document.querySelector('.dimmer')
+    if(dimmerElement) dimmerElement.remove()
+    if(navLinks[0].classList.contains('hide-link')){
+      navLinks.forEach(link => {
+        link.classList.toggle('hide-link')
+      });
+    }
+  }
+}
+
+window.onresize = fixNav;

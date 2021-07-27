@@ -76,6 +76,7 @@ a{
 	height: 2rem;
 	cursor: pointer;
 	position: relative;
+	z-index: 4;
 
 	@include mixins.wide-screen{
 		display: none;
@@ -131,12 +132,13 @@ a{
 	position: absolute;
 	width: 0rem;
 	opacity: 0;
-	right: 0;
+	left: 0;
 	top: 0;
 	height: 100vh;
 	@include mixins.default-grid;
 	padding: 4rem 3.7rem 0 0;
 	transition: width 200ms ease-in-out;
+	z-index: 3;
 
 	@include mixins.wide-screen{
 		grid-row: 1/2;
@@ -161,7 +163,11 @@ a{
 
 	
 	&__item{
-		display: none;
+
+		&_open{
+			margin-top: 3rem;
+			text-align: right;
+		}
 
 		@include mixins.wide-screen{
 			display: flex;
@@ -173,18 +179,19 @@ a{
 		padding: 0.3rem;
 		text-decoration: none;
 		font-size: 1.75rem;
+		color: black;
 
 		@include mixins.wide-screen{
 			font-size: 1.05rem;
-			color: black;
+		}
 
-			&:hover{
-				color: #ed8936;
-			}
+		&:hover{
+			color: #ed8936;
 		}
 	}
 
 	&_open{
+		background: whitesmoke;
 		width: 20.6rem;
 		opacity: 1;
 	}
@@ -782,4 +789,8 @@ a{
 
 .answer-arrow-rotate{
 	transform: rotate(135deg);
+}
+
+.hide-link{
+	color: whitesmoke;
 }
