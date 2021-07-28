@@ -1196,6 +1196,14 @@ a {
   position: relative;
   margin-bottom: 3.5rem;
 }
+@media (min-width: 768px) {
+  .volunteer {
+    background: #909097;
+    -ms-grid-columns: 0.5fr 1fr 0.5fr;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    margin-bottom: unset;
+  }
+}
 .volunteer__icon {
   margin-top: 1.75rem;
   -ms-grid-column-align: center;
@@ -1287,11 +1295,42 @@ a {
   cursor: pointer;
   display: block;
   border: none;
-  margin: 2.25rem auto 0;
+  margin: 2.5rem auto 0;
 }
 .volunteer__submit:hover {
   -webkit-filter: brightness(1.1);
           filter: brightness(1.1);
+}
+.volunteer__error {
+  color: red;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.7rem;
+}
+@media (min-width: 768px) {
+  .volunteer__error {
+    margin-bottom: 1.75rem;
+  }
+}
+
+.wide-screen-container {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+@media (min-width: 768px) {
+  .wide-screen-container {
+    background: whitesmoke;
+    margin: 3.5rem 0 5rem;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    border-radius: 0.7rem;
+  }
 }
 
 /* 2. Utility ================================ */

@@ -759,6 +759,12 @@ a{
 	position: relative;
 	margin-bottom: 3.5rem;
 
+	@include mixins.landscape{
+		background: #909097;
+		grid-template-columns: 0.5fr 1fr 0.5fr;
+		margin-bottom: unset;
+	}
+
 	&__icon{
 		margin-top: 1.75rem;
 		justify-self: center;
@@ -851,15 +857,34 @@ a{
 		@include mixins.button;
 		display: block;
 		border: none;
-		margin: 2.25rem auto 0;
+		margin: 2.5rem auto 0;
 	}
 
-	
+	&__error{
+		color: red;
+		font-size: 1rem;
+		text-align: center;
+		margin-top: 0.7rem;
 
+		@include mixins.landscape{
+			margin-bottom: 1.75rem;
+		}
+	}
 
 }
 
+.wide-screen-container{
+	@include mixins.default-grid;
+	position: relative;
+	margin-bottom: 3.5rem;
 
+	@include mixins.landscape{
+		background: whitesmoke;
+		margin: 3.5rem 0 5rem;
+		grid-column: 2/3;
+		border-radius: 0.7rem;
+	}
+}
 
 /* 2. Utility ================================ */
 
