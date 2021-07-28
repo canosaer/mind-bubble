@@ -447,8 +447,8 @@ a {
 .hero__heading {
   text-align: center;
   line-height: 1.5;
-  font-size: 2rem;
   z-index: 1;
+  font-size: 2rem;
   margin: 10% 3% 0%;
 }
 .hero__cta {
@@ -1185,6 +1185,113 @@ a {
   position: relative;
   color: black;
   cursor: text;
+}
+
+.volunteer {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+.volunteer__icon {
+  margin-top: 1.75rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-size: 3rem;
+  color: #909097;
+}
+.volunteer__heading {
+  text-align: center;
+  line-height: 1.5;
+  z-index: 1;
+  margin-top: 1.75rem;
+  font-size: 1.4rem;
+  position: relative;
+}
+.volunteer__heading_main {
+  font-size: 2rem;
+}
+.volunteer__heading_program {
+  margin-top: 1rem;
+}
+.volunteer__heading_name, .volunteer__heading_email {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.volunteer__heading_background {
+  display: block;
+  line-height: 1.5rem;
+  width: 20rem;
+  margin-bottom: 0.65rem;
+}
+.volunteer__tip {
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+.volunteer__required {
+  position: absolute;
+  top: 0;
+  font-size: 0.75rem;
+  color: red;
+  padding-left: 0.15rem;
+}
+.volunteer__required_background {
+  right: 7.25rem;
+  top: 2.7rem;
+}
+.volunteer__check-row {
+  margin: 0.75rem auto;
+  width: 19.65rem;
+}
+.volunteer__input {
+  width: 21rem;
+  z-index: 2;
+  font-size: 1.05rem;
+  padding: 0.35rem;
+  height: 2rem;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 19rem;
+}
+.volunteer__input_email {
+  margin-bottom: 1.75rem;
+}
+.volunteer__background {
+  display: flex;
+  justify-content: center;
+}
+.volunteer__radio_true {
+  margin: 0.15rem 0.25rem 0 0;
+}
+.volunteer__radio_false {
+  margin: 0.15rem 0.25rem 0 1.85rem;
+}
+.volunteer__submit {
+  text-align: center;
+  background: #4d6dd1;
+  color: white;
+  height: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  height: 3rem;
+  width: 20rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  z-index: 1;
+  border-radius: 999rem;
+  cursor: pointer;
+  display: block;
+  border: none;
+  margin: 2.25rem auto 0;
+}
+.volunteer__submit:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
 }
 
 /* 2. Utility ================================ */

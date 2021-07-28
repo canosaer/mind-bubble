@@ -273,10 +273,8 @@ a{
 	}
 
 	&__heading{
-		text-align: center;
-		line-height: 1.5;
+		@include mixins.menu-heading;
 		font-size: 2rem;
-		z-index: 1;
 		margin: 10% 3% 0%;
 	}
 
@@ -754,6 +752,111 @@ a{
 		color: black;
 		cursor: text;
 	}
+}
+
+.volunteer{
+	@include mixins.default-grid;
+	position: relative;
+	margin-bottom: 3.5rem;
+
+	&__icon{
+		margin-top: 1.75rem;
+		justify-self: center;
+		font-size: 3rem;
+		color: #909097;
+	}
+
+	&__heading{
+		@include mixins.menu-heading;
+		margin-top: 1.75rem;
+		font-size: 1.4rem;
+		position: relative;
+
+		&_main{
+			font-size: 2rem;
+		}
+
+		&_program{
+			margin-top: 1rem;
+		}
+
+		&_name, &_email{
+			display: block;
+			margin-bottom: 0.3rem;
+		}
+
+		&_background{
+			display: block;
+			line-height: 1.5rem;
+			width: 20rem;
+			margin-bottom: 0.65rem;
+		}
+	}
+
+	&__tip{
+		margin-top: 0.2rem;
+		font-size: 0.75rem;
+		text-align: center;
+	}
+
+	&__required{
+		position: absolute;
+		top: 0;
+		font-size: 0.75rem;
+		color: red;
+		padding-left: 0.15rem;
+
+		&_background{
+			right: 7.25rem;
+			top: 2.7rem;
+		}
+	}
+
+	&__check-row{
+		margin: 0.75rem auto;
+		width: 19.65rem;
+	}
+
+	&__input{
+		width: 21rem;
+		z-index: 2;
+		font-size: 1.05rem;
+		padding: 0.35rem;
+		height: 2.0rem;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		width: 19rem;
+
+		&_email{
+			margin-bottom: 1.75rem;
+		}
+	}
+
+	&__background{
+		display: flex;
+		justify-content: center;
+	}
+
+	&__radio{
+		&_true{
+			margin: 0.15rem 0.25rem 0 0;
+		}
+		&_false{
+			margin: 0.15rem 0.25rem 0 1.85rem;
+		}
+	}
+
+	&__submit{
+		@include mixins.button;
+		display: block;
+		border: none;
+		margin: 2.25rem auto 0;
+	}
+
+	
+
+
 }
 
 

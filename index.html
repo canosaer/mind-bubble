@@ -28,7 +28,7 @@
 						<li class="menu__item"><a class="menu__link" href="#">Tutoring</a></li>
 						<li class="menu__item"><a class="menu__link" href="#">Workshops</a></li>
 						<li class="menu__item"><a class="menu__link" href="#">About Us</a></li>
-						<li class="menu__item"><a class="menu__link" href="#">Volunteer</a></li>
+						<li class="menu__item"><a class="menu__link" href="/volunteer.html">Volunteer</a></li>
 						<li class="menu__item"><a class="menu__link" href="#">Donate</a></li>
 					</ul>
 				</nav>
@@ -66,12 +66,12 @@
 				</form>
 				<form class="hero__menu hero__menu_2 hidden">
 					<label for="username" class="hero__cta">What is your name?</label>
-					<input name="username" id="username" class="hero__name-input">
+					<input type="text" required="true" name="username" id="username" class="hero__name-input" aria-required="true">
 					<p class="hero__validation hero__validation_name invisible">Enter your name to continue</p>
 				</form>
 				<form class="hero__menu hero__menu_3 hidden">
 					<label for="email" class="hero__cta">What is your email address?</label>
-					<input name="email" id="email" class="hero__email-input">
+					<input type="text" required="true" name="email" id="email" class="hero__email-input" aria-required="true">
 					<p class="hero__validation hero__validation_email invisible">Enter a valid email address to continue</p>
 				</form>
 				<form class="hero__menu hero__menu_4 hidden">
@@ -189,6 +189,10 @@
 		</main>
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-		<script src="dist/js/main.js"></script>
+		<script src="dist/js/preloader.js"></script>
+		<script src="dist/js/nav-fixer.js"></script>
+		<script src="dist/js/menu-toggle.js"></script>
+		<script src="dist/js/hero-menu.js"></script>
+		<script src="dist/js/faq.js"></script>
 	</body>
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title> Mind Bubble Tutoring, Workshops, and Games </title>
+		<meta name="description" content="Mind Bubble fosters a love of learning by connecting students with community members through free tutoring, workshops, and games.">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<script src="https://kit.fontawesome.com/5290a709ed.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="dist/css/main.css" />
+	</head>
+
+	<body>
+		<main class="display-grid">
+			<header class="top-row">
+				<figure class="toggle" tabindex="0">
+					<div class="toggle__line toggle__line_1"></div>
+					<div class="toggle__line toggle__line_2"></div>
+				</figure>
+				<nav class="menu">
+					<ul class="menu__list">
+						<li class="menu__item"><a class="menu__link" href="/index.html">Home</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">Tutoring</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">Workshops</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">About Us</a></li>
+						<li class="menu__item"><a class="menu__link" href="/volunteer.html">Volunteer</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">Donate</a></li>
+					</ul>
+				</nav>
+				<figure class="logo">
+					<a class="logo__link" href="#"></a>
+				</figure>
+				<form class="search-bar">
+					<button class="search-bar__button">
+						<img class="search-bar__button-icon" src="dist/img/magnifying-glass.svg" alt="search">
+					</button>
+					<input class="search-bar__input" placeholder="Search">
+				</form>
+			</header>
+
+			<section class="volunteer">
+				<i class="fas fa-hand-holding-heart volunteer__icon"></i>
+				<h1 class="volunteer__heading volunteer__heading_main">Volunteer Sign-Up</h1>
+				<form class="volunteer__form">
+					<h2 class="volunteer__heading volunteer__heading_program">How would you like to help?<span class="volunteer__required">*</span></h2>
+					<p class="volunteer__tip" aria-required="true">Select at least one program and check all that apply.</p>
+					<fieldset class="volunteer__check-row">
+						<input type="checkbox" name="tutoring" id="tutoring" class="volunteer__checkbox">
+						<label class="volunteer__label volunteer__label_check" for="tutoring">I'd like to tutor!</label>
+					</fieldset>
+					<fieldset class="volunteer__check-row">
+						<input type="checkbox" name="workshops" id="workshops" class="volunteer__checkbox">
+						<label class="volunteer__label volunteer__label_check" for="workshops">I'd like to facilitate workshops!</label>
+					</fieldset>
+					<fieldset class="volunteer__check-row">
+						<input type="checkbox" name="games" id="games" class="volunteer__checkbox">
+						<label class="volunteer__label volunteer__label_check" for="games">I'd like to help kids learn new games!</label>
+					</fieldset>
+					<label for="username" class="volunteer__heading volunteer__heading_name">What is your name?<span class="volunteer__required">*</span></label>
+					<input type="text" required="true" name="username" id="username" class="volunteer__input volunteer__input_name" aria-required="true">
+					<label for="email" class="volunteer__heading volunteer__heading_email">What is your email address?<span class="volunteer__required">*</span></label>
+					<input type="text" required="true" name="email" id="email" class="volunteer__input volunteer__input_email" aria-required="true">
+					<fieldset class="volunteer__background">
+						<legend class="volunteer__heading volunteer__heading_background" aria-required="true">Have you ever been convicted or plead guilty to a crime? <span class="volunteer__required volunteer__required_background">*</span></legend>
+						<input type="radio" name="background" id="crime-true" class="volunteer__radio volunteer__radio_true">
+						<label class="volunteer__label volunteer__label_radio" for="crime-true">Yes</label>
+						<input type="radio" name="background" id="crime-false" class="volunteer__radio volunteer__radio_false">
+						<label class="volunteer__label volunteer__label_radio" for="crime-false">No</label>
+					</fieldset>
+					<button class="volunteer__submit">Sign Up!</button>
+				</form>
+			</section>
+
+			<footer class="footer">
+				<button class="faq" role="list">
+					<p class="faq__text" id="faq" role="button">FAQ</p>
+					<div class="faq__accordion hidden" aria-labelledby="faq">
+						<h5 class="faq__heading" id="about" tabindex="0"><div class="faq__arrow"></div>What is Mind Bubble?</h5>
+						<p class="faq__answer" aria-labelledby="about">Lorem Ipsum</p>
+						<h5 class="faq__heading" id="volunteer" tabindex="0"><div class="faq__arrow"></div>How do I vounteer?</h5>
+						<p class="faq__answer" aria-labelledby="volunteer">Lorem Ipsum</p>
+						<h5 class="faq__heading" id="free" tabindex="0"><div class="faq__arrow"></div>Why is Mind Bubble Free?</h5>
+						<p class="faq__answer" aria-labelledby="free">Lorem Ipsum</p>
+					</div>
+				</button>
+				<p class="footer__text">&copy;2021 Mind Bubble</p>
+			</footer>
+		</main>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+		<script src="dist/js/nav-fixer.js"></script>
+		<script src="dist/js/menu-toggle.js"></script>
+		<script src="dist/js/faq.js"></script>
+	</body>
+</html>

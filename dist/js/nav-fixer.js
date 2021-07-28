@@ -1,0 +1,2 @@
+class NavFixer{constructor(){this.navMenu=document.querySelector(".menu"),this.navLinks=document.querySelectorAll(".menu__link"),this.setup()}setup=()=>{window.onresize=this.fixNav};fixNav=()=>{if(window.innerWidth>=1200){this.navMenu.style.width="100%";let e=document.querySelector(".dimmer");e&&e.remove(),this.navLinks[0].classList.contains("hide-link")&&this.navLinks.forEach((e=>{e.classList.toggle("hide-link")}))}}}new NavFixer;
+//# sourceMappingURL=nav-fixer.js.map
