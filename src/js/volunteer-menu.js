@@ -37,23 +37,28 @@ class VolunteerMenu{
         
         console.log(`background: ${backgroundResponse} name: ${nameResponse} email: ${emailResponse} program: ${programResponse}`)
 
-        //----
-        if(backgroundResponse && nameResponse && programResponse && emailResponse){
-            console.log('')
-        }
-        else{
+        
+        if(!backgroundResponse || !nameResponse || !programResponse || !emailResponse){
             if(errorEl.classList.contains('invisible')) errorEl.classList.toggle('invisible')
             errorEl.textContent = 'Complete all fields to continue'
+            passed = false
         }
 
         if(emailResponse){
             let emailRE = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w{2,}([-.]\w{2,})*$/
             if(!emailRE.test(emailInput.value)){
-                console.log('yo')
                 if(errorEl.classList.contains('invisible')) errorEl.classList.toggle('invisible')
                 errorEl.textContent = 'Please enter a valid email address'
                 passed = false
             }
+        }
+
+        if(passed){
+            let volunteerForm = document.querySelector('.volunteer__form')
+            let successDisplay = document.querySelector('.volunteer__heading_success')
+
+            volunteerForm.classList.toggle('hidden')
+            successDisplay.classList.toggle('hidden')
         }
 
         

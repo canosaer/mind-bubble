@@ -1235,6 +1235,9 @@ a {
   width: 20rem;
   margin-bottom: 0.65rem;
 }
+.volunteer__heading_success {
+  margin-bottom: 4rem;
+}
 .volunteer__tip {
   margin-top: 0.2rem;
   font-size: 0.75rem;
