@@ -6,13 +6,15 @@ class MenuToggle{
         this.siteNavigationItems = document.querySelectorAll(`.menu__item`)
         this.siteNavigationLinks = document.querySelectorAll(`.menu__link`)
         this.toggleLines = document.querySelectorAll(`.toggle__line`)
+        this.toggleRadio = document.querySelector('.toggle__radio')
   
         this.setupListeners()
     }
   
     setupListeners() {
   
-        this.toggle.addEventListener(`click`, this.handleToggleClick)
+        // this.toggle.addEventListener(`click`, this.handleToggleClick)
+        this.toggleRadio.addEventListener(`click`, this.handleToggleClick)
     }
   
     handleToggleClick = (evt) => {

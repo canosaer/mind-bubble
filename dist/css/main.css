@@ -254,6 +254,18 @@ a {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+.toggle__radio {
+  opacity: 0;
+  position: absolute;
+  cursor: none;
+  left: 1.75rem;
+  top: 3.4rem;
+}
+@media (min-width: 1200px) {
+  .toggle__radio {
+    display: none;
+  }
+}
 
 .logo {
   -ms-grid-column: 2;
@@ -290,6 +302,7 @@ a {
 
 .menu {
   position: absolute;
+  visibility: hidden;
   width: 0rem;
   opacity: 0;
   left: 0;
@@ -320,6 +333,7 @@ a {
     height: unset;
     padding: unset;
     transition: unset;
+    visibility: unset;
   }
   .menu__list {
     -ms-grid-row-align: center;
@@ -358,6 +372,7 @@ a {
   background: whitesmoke;
   width: 20.6rem;
   opacity: 1;
+  visibility: unset;
 }
 
 .search-bar {
