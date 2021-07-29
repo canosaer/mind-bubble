@@ -1219,6 +1219,17 @@ a {
 .faq-page__answer-text {
   line-height: 1.4;
 }
+.faq-page__arrow {
+  position: absolute;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  width: 10px;
+  height: 10px;
+  left: 0.55rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
 
 .faq {
   color: #4d6dd1;
@@ -1459,6 +1470,11 @@ a {
 .answer-arrow-rotate {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
+}
+
+.answer-arrow-aria-rotate {
+  -webkit-transform: translateY(-50%) rotate(135deg);
+          transform: translateY(-50%) rotate(135deg);
 }
 
 .hide-link {

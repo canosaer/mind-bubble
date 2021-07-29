@@ -773,6 +773,17 @@ a{
 	&__answer-text{
 		line-height: 1.4;
 	}
+
+	&__arrow{
+		position: absolute;
+		border-top: 2px solid white;
+		border-right: 2px solid white;
+		width: 10px;
+		height: 10px;
+		left: 0.55rem;
+		top: 50%;
+		transform: translateY(-50%) rotate(45deg);
+	}
 }
 
 .faq{
@@ -1004,6 +1015,10 @@ a{
 
 .answer-arrow-rotate{
 	transform: rotate(135deg);
+}
+
+.answer-arrow-aria-rotate{
+	transform: translateY(-50%) rotate(135deg);
 }
 
 .hide-link{
