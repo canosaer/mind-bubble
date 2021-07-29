@@ -760,7 +760,7 @@ a{
 	margin-bottom: 3.5rem;
 
 	@include mixins.landscape{
-		background: #909097;
+		background: lightgray;
 		grid-template-columns: 0.5fr 1fr 0.5fr;
 		margin-bottom: unset;
 	}

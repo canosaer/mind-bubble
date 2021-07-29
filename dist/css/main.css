@@ -1198,7 +1198,7 @@ a {
 }
 @media (min-width: 768px) {
   .volunteer {
-    background: #909097;
+    background: lightgray;
     -ms-grid-columns: 0.5fr 1fr 0.5fr;
     grid-template-columns: 0.5fr 1fr 0.5fr;
     margin-bottom: unset;
